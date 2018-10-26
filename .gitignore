@@ -1,6 +1,5 @@
 # Custom gitignore
 .idea/
-static/
 
 
 # Byte-compiled / optimized / DLL files

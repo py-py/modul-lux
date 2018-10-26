@@ -17,9 +17,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from project.admin import admin_modullux
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+    path('', include(('backend.urls', 'backend'), namespace='backend')),
     path('admin/', admin_modullux.urls),
 ]
 

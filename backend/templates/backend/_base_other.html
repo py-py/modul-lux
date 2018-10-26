@@ -1,0 +1,246 @@
+{% extends 'backend/_base.html' %}
+
+{% block header %}
+    <!-- header / start-->
+    <header>
+        <!-- Header Desktop-->
+        <div class="section section-header section-header-1 pos-absolute bg-white hidden-tablet-landscape js-header"
+             data-scroll-offset="300">
+            <div class="container">
+                <div class="header-main block-contain">
+                    <div class="block-left">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/icons/ic-logo-02.png" alt="Mina">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-navbar navbar-dropdow-dark hidden-tablet-landscape js-header-style">
+                        <div class="navbar-wrap">
+                            <nav class="navbar-horizontal">
+                                <ul class="navbar-menu">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blank-bar p-b-100 hidden-tablet-landscape"></div>
+        <!-- Header Mobile-->
+        <div class="section section-header section-header-mobile section-header-mobile-1 hidden-tablet-landscape-up">
+            <div class="header-main block-contain">
+                <div class="block-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/icons/ic-logo-02.png" alt="Mina">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-navbar-mobile">
+                <nav class="navbar-mobile js-navbar">
+                    <ul class="navbar-menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="shop.html">Shop</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header / end-->
+{% endblock %}
+
+{% block heading_page %}
+    <!-- heading page / .start-->
+    <div class="heading-page bg-cover"
+         style="background: url(&quot;images/bg-heading-page-01.jpg&quot;) center center no-repeat;">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="#">ABOUT US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Heading page / . end-->
+{% endblock %}
+
+{% block footer %}
+    <!-- footer / .start-->
+    <footer class="footer bg-black p-t-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <h3 class="title">About us</h3>
+                    <p class="textbox">Phasellus posuere vehicula sem sitdapibus. Pellentesque malesuada diam s</p>
+                    <ul class="horizontal-list socials">
+                        <li>
+                            <a class="fa fa-facebook" href="#" data-toggle="tooltip" title="Facebook"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-pinterest" href="#" data-toggle="tooltip" title="Pinterest"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter" href="#" data-toggle="tooltip" title="Twitter"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-youtube" href="#" data-toggle="tooltip" title="Youtube"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-instagram" href="#" data-toggle="tooltip" title="Instagram"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-google-plus" href="#" data-toggle="tooltip" title="Google plus"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-tumblr" href="#" data-toggle="tooltip" title="tumblr"></a>
+                        </li>
+                    </ul>
+                    <a class="text-inline" href="#">
+                        <img src="images/icons/ic-norton.png" data-toggle="tooltip" title="Norton Safe" alt="norton">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <h3 class="title">Customer Service</h3>
+                    <ul class="vertical-list block-list">
+                        <li>
+                            <a href="#">Shipping & Returns</a>
+                        </li>
+                        <li>
+                            <a href="#">My account</a>
+                        </li>
+                        <li>
+                            <a href="#">Product warranty</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <h3 class="title">Contact us</h3>
+                    <ul class="vertical-list block-list contacts">
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>(+04) 198-776</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-send"></i>
+                            <span>contact@yoursite.com</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <span>154 address name, New York City</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <h3 class="title">We’re on instagram</h3>
+                    <ul class="horizontal-list instarfeeds">
+                        <li>
+                            <a href="https://www.instagram.com/p/BXULI9ugQQb/" target="_blank">
+                                <img src="images/instafeed-01.jpg" alt="instafeed">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/p/BXUL7hsAywO/" target="_blank">
+                                <img src="images/instafeed-02.jpg" alt="instafeed">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/p/BXUL-l_gxDG/" target="_blank">
+                                <img src="images/instafeed-03.jpg" alt="instafeed">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/p/BXUMA3qgRTg/" target="_blank">
+                                <img src="images/instafeed-04.jpg" alt="instafeed">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/p/BXUMCWGA3HP/" target="_blank">
+                                <img src="images/instafeed-05.jpg" alt="instafeed">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/p/BXUMD03A3Ix/" target="_blank">
+                                <img src="images/instafeed-06.jpg" alt="instafeed">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bot-bar">
+            <div class="container">
+                <div class="block-contain">
+                    <div class="block-left">
+                        <ul class="horizontal-list quicklinks">
+                            <li>
+                                <a href="#">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Cookie Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-right">
+                        <ul class="horizontal-list payments">
+                            <li>
+                                <a href="#">
+                                    <img src="images/icons/mastercard.png" data-toggle="tooltip" title="Payment method"
+                                         alt="master card">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/icons/paypal.png" data-toggle="tooltip" title="Payment method"
+                                         alt="master card">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/icons/american.png" data-toggle="tooltip" title="Payment method"
+                                         alt="master card">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/icons/visa.png" data-toggle="tooltip" title="Payment method"
+                                         alt="master card">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer / .end-->
+{% endblock %}

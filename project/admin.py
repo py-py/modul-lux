@@ -6,8 +6,8 @@ from django.contrib.auth.models import User, Group
 
 class ModulLuxSite(admin.AdminSite):
     site_header = _('Modul-Lux Admin')
-    site_title = _('Modul-lux Admin')
-    pass
+    site_title = _('Modul-Lux Admin')
+
 
 admin_modullux = ModulLuxSite()
 admin_modullux.register(User, UserAdmin)

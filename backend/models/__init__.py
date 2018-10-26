@@ -1,2 +1,2 @@
 from .category import *
-from .furniture import *
+from .product import *

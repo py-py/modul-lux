@@ -1,0 +1,515 @@
+{% extends 'backend/_base.html' %}
+{% load static %}
+
+{% block header %}
+    <!-- Header / .start-->
+    <header>
+        <!-- Header Desktop-->
+        <div class="header-vertical hidden-tablet-landscape customScrollbar" data-scroll-cursorcolor="#b9b9b9"
+             data-scroll-cursorwidth="3px">
+            <div class="logo">
+                <a href="{% url 'backend:index' %}">
+                    <img src="{% static 'backend/images/icons/ic-logo-01.png' %}" alt="Mina">
+                </a>
+            </div>
+            <div class="navbar-wrap">
+                <nav class="navbar-vertical js-navbar">
+                    <ul class="navbar-menu">
+                        <li>
+                            <a href="{% url 'backend:index' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backend:shop' %}">Shop</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backend:about' %}">About</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backend:contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Header Moblie-->
+        <div class="section section-header section-header-mobile hidden-tablet-landscape-up">
+            <div class="header-main block-contain">
+                <div class="block-left">
+                    <div class="logo">
+                        <a href="{% url 'backend:index' %}">
+                            <img src="{% static 'backend/images/icons/ic-logo-02.png' %}" alt="Mina">
+                        </a>
+                    </div>
+                </div>
+                <div class="block-right">
+                    <button class="js-toggle-navbar-mobile hamburger hamburger--elastic">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="header-navbar-mobile">
+                <nav class="navbar-mobile js-navbar">
+                    <ul class="navbar-menu">
+                        <li>
+                            <a href="{% url 'backend:index' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backend:shop' %}">Shop</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backend:about' %}">About</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backend:contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header / .end-->
+{% endblock %}
+
+{% block slide %}
+    <!-- Slide-->
+    <!-- START REVOLUTION SLIDER-->
+    <div class="slide slide-push-left">
+        <div class="js-slide rev_slider" style="display:none;" data-slide-layout="fullscreen">
+            <ul>
+                <!-- LAYER No.1-->
+                <li class="item-3" data-transition="fade">
+                    <img class="rev-slidebg" src="{% static 'backend/images/slide-12.jpg' %}" alt="#"/>
+                    <h3 class="tp-caption tp-resizeme caption-1"
+                        data-frames="[{&quot;delay&quot;:900,&quot;split&quot;:&quot;chars&quot;,&quot;splitdelay&quot;:0.05,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;: &quot;wait&quot;, &quot;speed&quot;: 300, &quot;to&quot;: &quot;opacity: 0&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+                        data-x="['center']" data-hoffset="['0', '0', '0', '0']" data-y="['middle']"
+                        data-voffset="['-50', '-50', '-50', '-50']"
+                        data-width="['1100', '700', '700', '480']">Much more than a piece of furniture</h3>
+                    <div class="tp-caption tp-resizeme caption-3"
+                         data-frames="[{&quot;delay&quot;:2400,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+                         data-responsive="off" data-x="['center']" data-hoffset="['0', '0', '0', '0']"
+                         data-y="['middle']"
+                         data-voffset="['60', '80', '80', '120']" data-width="['1100', '700', '700', '480']">
+                        <a class="au-btn" href="blog-details-with-sidebar.html">Read more</a>
+                    </div>
+                </li>
+                <!-- LAYER No.2-->
+                <li class="item-3" data-transition="fade">
+                    <img class="rev-slidebg" src="{% static 'backend/images/slide-13.jpg' %}" alt="#"/>
+                    <h3 class="tp-caption tp-resizeme caption-1"
+                        data-frames="[{&quot;delay&quot;:900,&quot;split&quot;:&quot;chars&quot;,&quot;splitdelay&quot;:0.05,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;: &quot;wait&quot;, &quot;speed&quot;: 300, &quot;to&quot;: &quot;opacity: 0&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+                        data-x="['center']" data-hoffset="['0', '0', '0', '0']" data-fontsize="[90, 70, 70, 70]"
+                        data-y="['middle']" data-voffset="['-50', '-50', '-50', '-50']"
+                        data-width="['1100', '1100', '700', '480']">We
+                        made with love</h3>
+                    <div class="tp-caption tp-resizeme caption-3"
+                         data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+                         data-responsive="off" data-x="['center']" data-hoffset="['0', '0', '0', '0']"
+                         data-y="['middle']"
+                         data-voffset="['60', '60', '60', '100']" data-width="['1100', '700', '700', '480']">
+                        <div class="textbox text-center m-b-0">
+                            <a class="text-inline text-white text-bold text-hover-animate" href="product-details.html">Read
+                                more</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- LAYER No.3-->
+                <li class="item-3" data-transition="fade">
+                    <img class="rev-slidebg" src="{% static 'backend/images/slide-14.jpg' %}" alt="#"/>
+                    <h3 class="tp-caption tp-resizeme caption-1"
+                        data-frames="[{&quot;delay&quot;:900,&quot;split&quot;:&quot;chars&quot;,&quot;splitdelay&quot;:0.05,&quot;speed&quot;:500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power4.easeInOut&quot;},{&quot;delay&quot;: &quot;wait&quot;, &quot;speed&quot;: 300, &quot;to&quot;: &quot;opacity: 0&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+                        data-x="['center']" data-hoffset="['0', '0', '0', '0']" data-fontsize="[60, 60, 60, 60]"
+                        data-y="['middle']" data-voffset="['-50', '-50', '-50', '-50']"
+                        data-width="['1100', '1100', '700', '480']">More
+                        than a piece of furniture</h3>
+                    <div class="tp-caption tp-resizeme caption-3"
+                         data-frames="[{&quot;delay&quot;:1500,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;auto:auto;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]"
+                         data-responsive="off" data-x="['center']" data-hoffset="['0', '0', '0', '0']"
+                         data-y="['middle']"
+                         data-voffset="['60', '60', '60', '100']" data-width="['1100', '700', '700', '480']">
+                        <div class="textbox text-center m-b-0">
+                            <a class="text-inline text-white text-bold text-hover-animate" href="product-details.html">Read
+                                more</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Slide / .end-->
+{% endblock %}
+
+{% block main %}
+    <div class="page-wrap page-push-to-left">
+
+        <!-- section our product / start-->
+        <section class="section section-product bg-white p-t-60 p-b-30 p-l-70 p-r-70">
+            <div class="container-fluid">
+                <div class="heading-section text-center">
+                    <h3>Featured products</h3>
+                </div>
+                <div class="row">
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-07.jpg' %}" alt="Creative black chair"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Creative black chair</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-08.jpg' %}" alt="Pendant lamp"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Pendant lamp</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-09.jpg' %}" alt="Orange wooden chair"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Orange wooden chair</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-10.jpg' %}" alt="Combo book shelf"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Combo book shelf</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-11.jpg' %}" alt="Yellow wooden sponge table"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Yellow wooden sponge table</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-12.jpg' %}" alt="Blue modern Chair"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Blue modern Chair</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-13.jpg' %}" alt="Lighthouse lantern"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Lighthouse lantern</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-14.jpg' %}" alt="Timmy Sessel - Braun"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Timmy Sessel - Braun</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-15.jpg' %}" alt="Black &amp; white table"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Black &amp; white table</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
+                        <div class="image-box image-box-3">
+                            <div class="image">
+                                <a class="bg-overlay" href="product-details.html"></a>
+                                <img src="{% static 'backend/images/product-16.jpg' %}" alt="Handmade bag"/>
+                                <a class="btn-quickview" href="#quickviewModal">
+                                    <i class="fa fa-search-plus"></i>
+                                    <span>Quick view</span>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h3 class="title">
+                                    <a href="product-details.html">Handmade bag</a>
+                                </h3>
+                                <div class="info">
+                                    <span class="price">$50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section our product /  end-->
+
+        <!-- section call to action / start-->
+        <section class="section p-t-125 p-b-120 bg-cover"
+                 style="background: url({% static 'backend/images/call-to-action-01.jpg' %}) top center no-repeat;">
+            <a class="bg-overlay" href="#"></a>
+            <div class="container-fluid">
+                <h3 class="text-block text-white text-script text-large text-center m-b-40">Sale up to 50%</h3>
+                <p class="text-block text-center m-b-0">
+                    <a class="text-white text-hover-animate" href="#">Shop now</a>
+                </p>
+            </div>
+        </section>
+        <!-- section call to action / end-->
+
+        <!-- section our customer / start-->
+        <section class="section section-testimonials bg-white p-t-60 p-b-60 p-l-220 p-r-220">
+            <div class="container-fluid">
+                <div class="heading-section text-center">
+                    <h3>From our customers</h3>
+                </div>
+                <ul class="list-reset product-list owl-carousel" data-carousel-margin="30" data-carousel-nav="false"
+                    data-carousel-loop="true" data-carousel-autoplay="true" data-carousel-items="3"
+                    data-carousel-lg="2" data-carousel-md="3">
+                    <li>
+                        <div class="image-box image-box-4 color1">
+                            <p class="content">Vestibulum convallis vitae eros a conntum. Praesent malesuada odio
+                                ex, at vulputate nibh ultricies utn quis ipsume.</p>
+                            <div class="personal-block">
+                                <div class="avatar">
+                                    <a href="#">
+                                        <img src="{% static 'backend/images/avatar-01.jpg' %}" alt="Jacob Ray"/>
+                                    </a>
+                                </div>
+                                <div class="textbox">
+                                    <h3 class="name">
+                                        <a href="#">Jacob Ray</a>
+                                    </h3>
+                                    <span class="job-title">Project management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-box image-box-4 color2">
+                            <p class="content">Cras quis enim in lacus efficitur feugiat. Pellentesque interdum,
+                                nec iaculis mi hendrerit vitae. Donec ut magna pid.</p>
+                            <div class="personal-block">
+                                <div class="avatar">
+                                    <a href="#">
+                                        <img src="{% static 'backend/images/avatar-02.jpg' %}" alt="Dorothy Guzman"/>
+                                    </a>
+                                </div>
+                                <div class="textbox">
+                                    <h3 class="name">
+                                        <a href="#">Dorothy Guzman</a>
+                                    </h3>
+                                    <span class="job-title">Lead designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-box image-box-4 color1">
+                            <p class="content">Phasellus posuere vehicula sem sit amet dapibus. Pellentesque
+                                malesuada diam eget augue semper sollicitudin.</p>
+                            <div class="personal-block">
+                                <div class="avatar">
+                                    <a href="#">
+                                        <img src="{% static 'backend/images/avatar-03.jpg' %}" alt="Harold Bell"/>
+                                    </a>
+                                </div>
+                                <div class="textbox">
+                                    <h3 class="name">
+                                        <a href="#">Harold Bell</a>
+                                    </h3>
+                                    <span class="job-title">Junior Account</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- section our product /  end-->
+
+        <!-- section instafeed / .start-->
+        <div class="section section-instafeed">
+            <div class="bg-overlay"></div>
+            <h3 class="title">
+                <i class="fa fa-instagram"></i>
+                <span>We’re on instagram</span>
+            </h3>
+            <ul class="instarfeeds">
+                <li>
+                    <a href="https://www.instagram.com/p/BXUNqL9AH5F/" target="_blank">
+                        <img src="{% static 'backend/images/instafeed-07.jpg' %}" alt="instafeed">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BXUNraKAwlr/" target="_blank">
+                        <img src="{% static 'backend/images/instafeed-08.jpg' %}" alt="instafeed">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BXUNsragM6r/" target="_blank">
+                        <img src="{% static 'backend/images/instafeed-09.jpg' %}" alt="instafeed">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BXUNwZsgLlD/" target="_blank">
+                        <img src="{% static 'backend/images/instafeed-10.jpg' %}" alt="instafeed">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/p/BXUNynzg6BV/" target="_blank">
+                        <img src="{% static 'backend/images/instafeed-11.jpg' %}" alt="instafeed">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- section instafeed / .end-->
+
+        <!-- footer / start-->
+        <footer class="footer bg-black p-t-80 p-b-60">
+            <div class="container-fluid">
+                <div class="block-footer-mini">
+                    <a href={% url 'backend:index' %}>
+                        <img src="{% static 'backend/images/icons/ic-logo-01.png' %}" alt="Modul-Lux">
+                    </a>
+                    <ul class="horizontal-list socials">
+                        <li>
+                            <a class="fa fa-facebook" href="#" data-toggle="tooltip" title="Facebook"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-pinterest" href="#" data-toggle="tooltip" title="Pinterest"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-twitter" href="#" data-toggle="tooltip" title="Twitter"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-youtube" href="#" data-toggle="tooltip" title="Youtube"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-instagram" href="#" data-toggle="tooltip" title="Instagram"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-google-plus" href="#" data-toggle="tooltip" title="Google plus"></a>
+                        </li>
+                        <li>
+                            <a class="fa fa-tumblr" href="#" data-toggle="tooltip" title="tumblr"></a>
+                        </li>
+                    </ul>
+                    <p class="textbox">2018 Modul-Lux. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer / end-->
+    </div>
+{% endblock %}

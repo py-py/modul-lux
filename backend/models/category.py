@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext as _
 
-from backend.models.base import BaseImageAdmin
+from backend.models.base import *
 
 __all__ = ('Category', 'CategoryImage',)
 
 
-class CategoryImage(BaseImageAdmin):
+class CategoryImage(BaseImageModel):
     category = models.ForeignKey('backend.Category', on_delete=models.CASCADE, related_name='images')
 
     class Meta:
@@ -31,8 +31,7 @@ class CategoryImage(BaseImageAdmin):
         super().save(*args, **kwargs)
 
 
-class Category(models.Model):
-    name = models.CharField(verbose_name=_('Наименование'), max_length=255)
+class Category(BaseItemModel):
 
     class Meta:
         verbose_name = _('Категория')
