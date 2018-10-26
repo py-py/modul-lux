@@ -65,7 +65,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
-                'project.context_processor.enable_options',
+                'project.context_processor.options',
             ],
         },
     },
@@ -126,4 +126,48 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # CUSTOM SETTINGS
-ENABLE_SITE_OPTIONS = False
+SITE_OPTIONS = {
+    # reviews
+    'send_review': True,
+    'see_review': True,
+
+    # products
+    'search': False,
+    'sales': True,
+
+    # shop filters
+    'sort': False,
+    'filter': {
+        'price': True,
+        'color': True,
+        'brand': True,
+    },
+
+    # customer
+    'login': False,
+    'order': True,
+    'wish': True,
+    'cart': False,
+
+    # contact
+    'contact_map': False,
+
+    # social network
+    'social': True,
+    'social_images': True,
+
+    'social_facebook': True,
+    'social_pinterest': True,
+    'social_twitter': True,
+    'social_youtube': True,
+    'social_instagram': True,
+    'social_googleplus': True,
+    'social_tumblr': True,
+
+    # payments:
+    'payment': True,
+    'payment_mastercard': True,
+    'payment_paypal': False,
+    'payment_american': False,
+    'payment_visa': True,
+}

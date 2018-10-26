@@ -27,6 +27,16 @@
                         <li>
                             <a href="{% url 'backend:contact' %}">Contact</a>
                         </li>
+                        {% if options.login %}
+                            <li>
+                                <a class="js-login-modal" data-remodal-target="loginModal">Login/Create</a>
+                            </li>
+                        {% endif %}
+                        {% if options.cart %}
+                        <li>
+                            <a href="{% url 'backend:index' %}">Cart (3)</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </nav>
             </div>
@@ -355,21 +365,25 @@
         </section>
         <!-- section our product /  end-->
 
-        <!-- section call to action / start-->
-        <section class="section p-t-125 p-b-120 bg-cover"
-                 style="background: url({% static 'backend/images/call-to-action-01.jpg' %}) top center no-repeat;">
-            <a class="bg-overlay" href="#"></a>
-            <div class="container-fluid">
-                <h3 class="text-block text-white text-script text-large text-center m-b-40">Sale up to 50%</h3>
-                <p class="text-block text-center m-b-0">
-                    <a class="text-white text-hover-animate" href="#">Shop now</a>
-                </p>
-            </div>
-        </section>
-        <!-- section call to action / end-->
+        {% if options.sales  %}
+            <!-- section call to action / start-->
+            <section class="section p-t-125 p-b-120 bg-cover"
+                     style="background: url({% static 'backend/images/call-to-action-01.jpg' %}) top center no-repeat;">
+                <a class="bg-overlay" href="#"></a>
+                <div class="container-fluid">
+                    <h3 class="text-block text-white text-script text-large text-center m-b-40">Sale up to 50%</h3>
+                    <p class="text-block text-center m-b-0">
+                        <a class="text-white text-hover-animate" href="#">Shop now</a>
+                    </p>
+                </div>
+            </section>
+            <!-- section call to action / end-->
+        {% endif %}
 
-        <!-- section our customer / start-->
-        <section class="section section-testimonials bg-white p-t-60 p-b-60 p-l-220 p-r-220">
+
+        {% if options.see_review  %}
+            <!-- section our customer / start-->
+            <section class="section section-testimonials bg-white p-t-60 p-b-60 p-l-220 p-r-220">
             <div class="container-fluid">
                 <div class="heading-section text-center">
                     <h3>From our customers</h3>
@@ -437,10 +451,13 @@
                 </ul>
             </div>
         </section>
-        <!-- section our product /  end-->
+            <!-- section our product /  end-->
+        {% endif %}
 
-        <!-- section instafeed / .start-->
-        <div class="section section-instafeed">
+
+        {% if options.social and options.instagram_images %}
+            <!-- section instafeed / .start-->
+            <div class="section section-instafeed">
             <div class="bg-overlay"></div>
             <h3 class="title">
                 <i class="fa fa-instagram"></i>
@@ -474,7 +491,9 @@
                 </li>
             </ul>
         </div>
-        <!-- section instafeed / .end-->
+            <!-- section instafeed / .end-->
+        {% endif %}
+
 
         <!-- footer / start-->
         <footer class="footer bg-black p-t-80 p-b-60">
@@ -483,29 +502,7 @@
                     <a href={% url 'backend:index' %}>
                         <img src="{% static 'backend/images/icons/ic-logo-01.png' %}" alt="Modul-Lux">
                     </a>
-                    <ul class="horizontal-list socials">
-                        <li>
-                            <a class="fa fa-facebook" href="#" data-toggle="tooltip" title="Facebook"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-pinterest" href="#" data-toggle="tooltip" title="Pinterest"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-twitter" href="#" data-toggle="tooltip" title="Twitter"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-youtube" href="#" data-toggle="tooltip" title="Youtube"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-instagram" href="#" data-toggle="tooltip" title="Instagram"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-google-plus" href="#" data-toggle="tooltip" title="Google plus"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-tumblr" href="#" data-toggle="tooltip" title="tumblr"></a>
-                        </li>
-                    </ul>
+                    {% include 'backend/includes/social_include.html' %}
                     <p class="textbox">2018 Modul-Lux. All rights reserved.</p>
                 </div>
             </div>

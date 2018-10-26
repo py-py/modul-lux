@@ -1,0 +1,42 @@
+{% load static %}
+
+{% if options.payment %}
+    <ul class="horizontal-list payments">
+        {% if options.payment_mastercard %}
+            <li>
+                <a href="#">
+                    <img src="{% static 'backend/images/icons/mastercard.png' %}" data-toggle="tooltip"
+                         title="Payment method"
+                         alt="master card">
+                </a>
+            </li>
+        {% endif %}
+        {% if options.payment_paypal %}
+            <li>
+                <a href="#">
+                    <img src="{% static 'backend/images/icons/paypal.png' %}" data-toggle="tooltip"
+                         title="Payment method"
+                         alt="master card">
+                </a>
+            </li>
+        {% endif %}
+        {% if options.payment_american %}
+            <li>
+                <a href="#">
+                    <img src="{% static 'backend/images/icons/american.png' %}" data-toggle="tooltip"
+                         title="Payment method"
+                         alt="american">
+                </a>
+            </li>
+        {% endif %}
+        {% if options.payment_visa %}
+            <li>
+                <a href="#">
+                    <img src="{% static 'backend/images/icons/visa.png' %}" data-toggle="tooltip"
+                         title="Payment method"
+                         alt="visa">
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}

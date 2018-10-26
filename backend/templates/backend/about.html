@@ -1,7 +1,15 @@
 {% extends 'backend/_base_other.html' %}
+{% load static %}
 
 {% block head_title %}
     About - Modul-Lux Site
+{% endblock %}
+
+{% block breadcrumbs %}
+    {{ block.super }}
+    <li>
+        <a href="{% url 'backend:about' %}">ABOUT US</a>
+    </li>
 {% endblock %}
 
 {% block main %}
@@ -11,7 +19,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-post-image">
-                        <img class="img-responsive" src="images/about-01.jpg" alt="About">
+                        <img class="img-responsive" src="{% static 'backend/images/about-01.jpg' %}" alt="About">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -42,8 +50,10 @@
     <!-- section article about us / end-->
 
     <!-- section call to action / start-->
-    <section class="call-to-action-3 section p-t-145 p-b-170 parallax" data-background="images/call-to-action-03.jpg"
-             data-img-width="1900" data-img-height="1240">
+    <section class="call-to-action-3 section p-t-145 p-b-170 parallax"
+             data-background="{% static 'backend/images/call-to-action-03.jpg' %}"
+             data-img-width="1900"
+             data-img-height="1240">
         <div class="bg-overlay"></div>
         <div class="container-fluid">
             <p class="text-block text-center text-med m-b-0">Everyproduct is Made</p>
