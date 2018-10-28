@@ -182,9 +182,11 @@
                         <li>
                             <a href="#">Shipping & Returns</a>
                         </li>
+                        {% if options.login %}
                         <li>
                             <a href="#">My account</a>
                         </li>
+                        {% endif %}
                         <li>
                             <a href="#">Product warranty</a>
                         </li>
@@ -195,15 +197,15 @@
                     <ul class="vertical-list block-list contacts">
                         <li>
                             <i class="fa fa-phone"></i>
-                            <span>(+04) 198-776</span>
+                            <span>{{ site_settings.phone }}</span>
                         </li>
                         <li>
                             <i class="fa fa-send"></i>
-                            <span>contact@yoursite.com</span>
+                            <span>{{ site_settings.email }}</span>
                         </li>
                         <li>
                             <i class="fa fa-map-marker"></i>
-                            <span>154 address name, New York City</span>
+                            <span>{{ site_settings.address }}</span>
                         </li>
                     </ul>
                 </div>

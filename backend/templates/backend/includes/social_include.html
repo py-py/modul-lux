@@ -1,36 +1,38 @@
-{% if options.social %}
+{% load values_tags %}
+
+{% if options.social|has_values %}
     <ul class="horizontal-list socials">
-        {% if options.social_facebook %}
+        {% if options.social.facebook %}
             <li>
                 <a class="fa fa-facebook" href="#" data-toggle="tooltip" title="Facebook"></a>
             </li>
         {% endif %}
-        {% if options.social_pinterest %}
+        {% if options.social.pinterest %}
             <li>
                 <a class="fa fa-pinterest" href="#" data-toggle="tooltip" title="Pinterest"></a>
             </li>
         {% endif %}
-        {% if options.social_twitter %}
+        {% if options.social.twitter %}
             <li>
                 <a class="fa fa-twitter" href="#" data-toggle="tooltip" title="Twitter"></a>
             </li>
         {% endif %}
-        {% if options.social_youtube %}
+        {% if options.social.youtube %}
             <li>
                 <a class="fa fa-youtube" href="#" data-toggle="tooltip" title="Youtube"></a>
             </li>
         {% endif %}
-        {% if options.social_instagram %}
+        {% if options.social.instagram %}
             <li>
                 <a class="fa fa-instagram" href="#" data-toggle="tooltip" title="Instagram"></a>
             </li>
         {% endif %}
-        {% if options.social_googleplus %}
+        {% if options.social.googleplus %}
             <li>
                 <a class="fa fa-google-plus" href="#" data-toggle="tooltip" title="Google plus"></a>
             </li>
         {% endif %}
-        {% if options.social_tumblr %}
+        {% if options.social.tumblr %}
             <li>
                 <a class="fa fa-tumblr" href="#" data-toggle="tooltip" title="tumblr"></a>
             </li>

@@ -1,8 +1,8 @@
-{% load static %}
+{% load static values_tags %}
 
-{% if options.payment %}
+{% if options.payment|has_values %}
     <ul class="horizontal-list payments">
-        {% if options.payment_mastercard %}
+        {% if options.payment.mastercard %}
             <li>
                 <a href="#">
                     <img src="{% static 'backend/images/icons/mastercard.png' %}" data-toggle="tooltip"
@@ -11,7 +11,7 @@
                 </a>
             </li>
         {% endif %}
-        {% if options.payment_paypal %}
+        {% if options.payment.paypal %}
             <li>
                 <a href="#">
                     <img src="{% static 'backend/images/icons/paypal.png' %}" data-toggle="tooltip"
@@ -20,7 +20,7 @@
                 </a>
             </li>
         {% endif %}
-        {% if options.payment_american %}
+        {% if options.payment.american %}
             <li>
                 <a href="#">
                     <img src="{% static 'backend/images/icons/american.png' %}" data-toggle="tooltip"
@@ -29,7 +29,7 @@
                 </a>
             </li>
         {% endif %}
-        {% if options.payment_visa %}
+        {% if options.payment.visa %}
             <li>
                 <a href="#">
                     <img src="{% static 'backend/images/icons/visa.png' %}" data-toggle="tooltip"

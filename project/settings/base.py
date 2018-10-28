@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 'project.context_processor.options',
+                'project.context_processor.site_settings',
             ],
         },
     },
@@ -131,43 +132,58 @@ SITE_OPTIONS = {
     'send_review': True,
     'see_review': True,
 
-    # products
-    'search': False,
+    # common
+    'search': True,
     'sales': True,
 
-    # shop filters
+    # products
+    'product': {
+        'price': False,
+        'rating': True,
+    },
+
+    # shop page
     'sort': False,
+    'pagination': False,
     'filter': {
-        'price': True,
-        'color': True,
-        'brand': True,
+        'price': False,
+        'color': False,
+        'brand': False,
     },
 
     # customer
     'login': False,
     'order': True,
     'wish': True,
-    'cart': False,
+    'cart': True,
 
     # contact
     'contact_map': False,
 
     # social network
-    'social': True,
+    'social': {
+        'facebook': True,
+        'pinterest': False,
+        'twitter': False,
+        'youtube': True,
+        'instagram': True,
+        'googleplus': True,
+        'tumblr': False,
+    },
     'social_images': True,
 
-    'social_facebook': True,
-    'social_pinterest': True,
-    'social_twitter': True,
-    'social_youtube': True,
-    'social_instagram': True,
-    'social_googleplus': True,
-    'social_tumblr': True,
-
     # payments:
-    'payment': True,
-    'payment_mastercard': True,
-    'payment_paypal': False,
-    'payment_american': False,
-    'payment_visa': True,
+    'payment': {
+        'mastercard': True,
+        'paypal': False,
+        'american': False,
+        'visa': True,
+    },
+
+}
+
+SITE_SETTINGS = {
+    'phone': '+380 56 123 4578',
+    'email': 'modul-lux@gmail.com',
+    'address': 'г.Днепр, ул.Ленина, 1, ТЦ "СитиМебель"',
 }

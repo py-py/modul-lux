@@ -1,0 +1,48 @@
+{% load static %}
+
+<ul class="products row">
+    {% for product in products %}
+        <li class="product col-md-4 col-sm-6 matchHeigh" style="height: 529.75px;">
+        <div class="image-box image-box-5">
+            <div class="image">
+                <a class="bg-overlay" href="{% url 'backend:product-details' product.id %}"></a>
+                <img src="{{ product.default_image.image.url }}" alt="{{ product.name }}">
+                <a class="btn-quickview" href="#quickviewModal">
+                    <i class="fa fa-search-plus"></i>
+                    <span>Quick view</span>
+                </a>
+            </div>
+            <div class="content">
+                <div class="title-bar">
+                    <h3 class="title">
+                        <a href="{% url 'backend:product-details' product.id %}">{{ product.name }}</a>
+                    </h3>
+                    {% if options.product.rating %}
+                        <ul class="star-rating">
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star"></li>
+                            <li class="fa fa-star-o"></li>
+                            <li class="fa fa-star-o"></li>
+                        </ul>
+                    {% endif %}
+                </div>
+                {% if options.product.price %}
+                    <span class="price">$50.00</span>
+                {% endif %}
+                <p class="textbox">{{ product.description }}</p>
+                {%  if options.wish %}
+                    <a class="add-to-wishlist" href="#" data-toggle="tooltip" title=""
+                       data-original-title="Add to wishlist">
+                        <i class="fa fa-heart-o"></i>
+                        <span>Add to wishlist</span>
+                    </a>
+                {% endif %}
+                {% if options.cart %}
+                    <a class="au-btn add-to-cart" href="#">Add to cart</a>
+                {% endif %}
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
