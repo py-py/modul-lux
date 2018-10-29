@@ -192,15 +192,22 @@ SITE_OPTIONS = {
 }
 
 SITE_SETTINGS = {
+    'name_site': 'Modul-Lux Site',
     'phone': '+380 56 123 4578',
     'email': 'modul-lux@gmail.com',
     'address': 'г.Днепр, ул.Ленина, 1, ТЦ "СитиМебель"',
-    'work_hours': 'Понедельник-Суббота 11.00–19.00',
+    'work_hours': 'Понедельник-Суббота 09:00–19:00',
 
     'support': {
         'phone': '+380 56 123 4578',
-        'email': 'modul-lux-service@gmail.com',
-        'work_hours': 'Понедельник-Суббота 11.00–19.00',
+        'email': 'service_support@gmail.com',
+        'address': 'г.Днепр, ул.Осенняя, 1',
+        'work_hours': 'Понедельник-Суббота 11:00–17:00',
 
+    },
+
+    'online': {
+        'phone': '+380 56 123 4578',
+        'email': 'online_support@gmail.com',
     }
 }

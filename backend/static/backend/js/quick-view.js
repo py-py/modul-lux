@@ -3,6 +3,9 @@
 (function ($) {
     // USE STRICT
     "use strict";
+
+    var instRemodal = $('[data-remodal-id=modal]').remodal();
+
     var getProductInfo = function (idProduct, urlProduct) {
         $.get({
             url: urlProduct,

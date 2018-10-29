@@ -1,4 +1,5 @@
 from django import views
+from django.http import Http404
 from django.shortcuts import render
 
 from backend.models import Category, Product
@@ -17,7 +18,7 @@ class ShopView(views.View):
             try:
                 category = Category.active_objects.get(id=id_category)
             except Category.DoesNotExist:
-                pass
+                raise Http404
             else:
                 products = Product.active_objects.filter(category=category)
                 context['products'] = products

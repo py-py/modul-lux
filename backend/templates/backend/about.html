@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block head_title %}
-    About - Modul-Lux Site
+    About:{{ site_settings.name_site }}
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -69,25 +69,26 @@
                 <div class="col-md-4">
                     <div class="textbox m-b-50">
                         <h3 class="text-block text-black text-sm text-bold m-b-20">Store Hours</h3>
-                        <p class="text-block">Monday-Saturday 11am–7pm</p>
-                        <p class="text-block">Sunday 11am–6pm</p>
-                        <p class="text-block">54 address name, New York City</p>
+                        <p class="text-block">{{ site_settings.phone }}</p>
+                        <p class="text-block">{{ site_settings.email }}</p>
+                        <p class="text-block">{{ site_settings.work_hours }}</p>
+                        <p class="text-block">{{ site_settings.address }}</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="textbox m-b-50">
                         <h3 class="text-block text-black text-sm text-bold m-b-20">Customer support</h3>
-                        <p class="text-block">(+04) 198-776</p>
-                        <p class="text-block">Contact@yoursite.com</p>
-                        <p class="text-block">Monday-Saturday 11am–7pm</p>
+                        <p class="text-block">{{ site_settings.support.phone }}</p>
+                        <p class="text-block">{{ site_settings.support.email }}</p>
+                        <p class="text-block">{{ site_settings.support.work_hours }}</p>
+                        <p class="text-block">{{ site_settings.support.address }}</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="textbox m-b-50">
                         <h3 class="text-block text-black text-sm text-bold m-b-20">Online services</h3>
-                        <p class="text-block">154 address name, New York City</p>
-                        <p class="text-block">+04) 198-776</p>
-                        <p class="text-block">Contact@yoursite.com</p>
+                        <p class="text-block">{{ site_settings.online.phone  }}</p>
+                        <p class="text-block">{{ site_settings.online.email }}</p>
                     </div>
                 </div>
             </div>

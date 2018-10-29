@@ -1,5 +1,5 @@
 from django import views
-from django.http import JsonResponse
+from django.http import JsonResponse, Http404
 from django.shortcuts import render
 from django.urls import reverse
 
@@ -13,7 +13,7 @@ class ProductDetailView(views.View):
         try:
             product = Product.active_objects.get(id=id_product)
         except Product.DoesNotExist as e:
-            raise e
+            raise Http404
         else:
             context = {
                 'product': product,
