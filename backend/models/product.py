@@ -39,9 +39,5 @@ class Product(BaseItemModel):
         verbose_name = _('Товар')
         verbose_name_plural = _('Товары')
 
-    @property
-    def default_image(self):
-        return self.images.get(is_default=True)
-
     def __str__(self):
         return '{}'.format(self.name)

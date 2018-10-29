@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'backend',
+    'client',
 ]
 
 MIDDLEWARE = [
@@ -129,17 +130,25 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # CUSTOM SETTINGS
 SITE_OPTIONS = {
     # reviews
-    'send_review': True,
-    'see_review': True,
+    'review': {
+        'send': False,
+        'see': True,
+    },
 
     # common
     'search': True,
     'sales': True,
 
-    # products
+    # category
+    'category': {
+        'rating': False,
+    },
+
+    # product
     'product': {
         'price': False,
-        'rating': True,
+        'rating': False,
+        'related': True,
     },
 
     # shop page
@@ -154,8 +163,8 @@ SITE_OPTIONS = {
     # customer
     'login': False,
     'order': True,
-    'wish': True,
-    'cart': True,
+    'wish': False,
+    'cart': False,
 
     # contact
     'contact_map': False,
@@ -186,4 +195,12 @@ SITE_SETTINGS = {
     'phone': '+380 56 123 4578',
     'email': 'modul-lux@gmail.com',
     'address': 'г.Днепр, ул.Ленина, 1, ТЦ "СитиМебель"',
+    'work_hours': 'Понедельник-Суббота 11.00–19.00',
+
+    'support': {
+        'phone': '+380 56 123 4578',
+        'email': 'modul-lux-service@gmail.com',
+        'work_hours': 'Понедельник-Суббота 11.00–19.00',
+
+    }
 }

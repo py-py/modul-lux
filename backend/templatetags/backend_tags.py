@@ -6,6 +6,6 @@ def has_values(value):
         return any(value.values())
     return False
 
+
 register = template.Library()
 register.filter('has_values', has_values)
-

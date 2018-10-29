@@ -20,8 +20,9 @@ from project.admin import admin_modullux
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include(('backend.urls', 'backend'), namespace='backend')),
-    path('admin/', admin_modullux.urls),
+    path('',            include(('backend.urls', 'backend'),    namespace='backend')),
+    path('client/',      include(('client.urls', 'client'),      namespace='client')),
+    path('admin/',      admin_modullux.urls),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -22,17 +22,16 @@
                             <div class="col-md-6">
                                 <div class="textbox m-b-20">
                                     <h3 class="text-block text-black text-sm text-bold m-b-20">Store Hours</h3>
-                                    <p class="text-block">Monday-Saturday 11am–7pm</p>
-                                    <p class="text-block">Sunday 11am–6pm</p>
-                                    <p class="text-block">54 address name, New York City</p>
+                                    <p class="text-block">{{ site_settings.phone }}</p>
+                                    <p class="text-block">{{ site_settings.work_hours }}</p>
+                                    <p class="text-block">{{ site_settings.address }}</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="textbox m-b-20">
                                     <h3 class="text-block text-black text-sm text-bold m-b-20">Customer support</h3>
-                                    <p class="text-block">(+04) 198-776</p>
-                                    <p class="text-block">Contact@yoursite.com</p>
-                                    <p class="text-block">Monday-Saturday 11am–7pm</p>
+                                    <p class="text-block">{{ site_settings.support.phone }}</p>
+                                    <p class="text-block">{{ site_settings.support.email }}</p>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +45,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="messages" id="status"></div>
-                        <form class="contact-form" method="post" action="{% static 'backend/includes/contact-form.php' %}" name="contact" id="contact-form" role="form" data-toggle="validator">
+                        <form class="contact-form" method="post" action="{% url 'client:message' %}" name="contact" id="contact-form" role="form" data-toggle="validator">
+                            {% csrf_token %}
                             <div class="row-cs">
                                 <div class="col-cs-6 form-group p-r-5">
                                     <p class="help-block with-errors">*</p>

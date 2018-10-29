@@ -18,6 +18,10 @@ class BaseItemModel(models.Model):
 
     active_objects = FilteredManager()
 
+    @property
+    def default_image(self):
+        return self.images.get(is_default=True)
+
     class Meta:
         abstract = True
 

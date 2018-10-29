@@ -1,0 +1,94 @@
+{% load static %}
+
+<div class="quickview-modal single-product remodal" data-remodal-id="quickviewModal">
+    <button class="remodal-close" data-remodal-action="close" aria-label="Close"></button>
+    <div class="single-product-detail customScrollbar" data-scroll-cursorcolor="#b9b9b9"
+         data-scroll-cursorwidth="3px">
+        <div class="row-cs">
+            <div class="col-cs-6 product-image-content">
+                <div class="owl-carousel" data-carousel-items="1" data-carousel-nav="true" data-carousel-xs="1"
+                     data-carousel-sm="1" data-carousel-md="1" data-carousel-lg="1"
+                     data-carousel-animateout="fadeOut"
+                     data-carousel-animatein="fadeIn" data-carousel-autowidth="false">
+                    <div class="image-box">
+                        <img src="{% static 'backend/images/quickview-01.jpg' %}" alt="product detail image"/>
+                    </div>
+                    <div class="image-box">
+                        <img src="{% static 'backend/images/quickview-02.jpg' %}" alt="product detail image"/>
+                    </div>
+                    <div class="image-box">
+                        <img src="{% static 'backend/images/quickview-03.jpg' %}" alt="product detail image"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-cs-6 product-summary">
+                <h3 class="product-title text-block m-b-10">
+                    <a class="text-black" href="product-details.html">Orange wooden chair</a>
+                </h3>
+                {% if options.product.rating %}
+                <ul class="product-star-rating m-b-5">
+                    <li class="color">
+                        <a class="fa fa-star" href="#"></a>
+                    </li>
+                    <li class="color">
+                        <a class="fa fa-star" href="#"></a>
+                    </li>
+                    <li class="color">
+                        <a class="fa fa-star" href="#"></a>
+                    </li>
+                    <li class="color">
+                        <a class="fa fa-star" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="fa fa-star" href="#"></a>
+                    </li>
+                </ul>
+                {% endif %}
+                {% if options.product.price %}
+                    <span class="product-price m-b-15">$50.00</span>
+                {% endif %}
+                <p class="product-short-description m-b-15">
+                    Dimensions (HWD): 204 x 102 x 102cm This steel-framed hanging chair is finished in a
+                    weather and water-resistant woven PU which mimics the look of dark brown
+                </p>
+                <div class="add-to-wishlist block-contain m-b-40">
+                    {% if options.wish %}
+                    <div class="block-left" data-toggle="tooltip" title="Add to wishlist">
+                        <a href="wishlist-page-html">
+                            <i class="fa fa-heart"></i>
+                            <span>Add to wishlist</span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    <div class="block-right" data-toggle="tooltip" title="View full details">
+                        <a href="#">
+                            <i class="fa fa-arrow-right"></i>
+                            <span>View full details</span>
+                        </a>
+                    </div>
+                </div>
+                {% if cart %}
+                <div class="product-select row-cs m-b-20">
+                    <div class="col-cs-6 p-r-5" data-toggle="tooltip" title="Color">
+                        <div class="color-select">
+                            <select class="au-select chosen-select no-search">
+                                <option value="1">Red</option>
+                                <option value="2">Green</option>
+                                <option value="3">Orange</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-cs-6 p-l-5" data-toggle="tooltip" title="Quantity">
+                        <div class="quantity">
+                            <span class="decrease"></span>
+                            <input class="au-input-number" type="number" value="1" min="1" max="100"/>
+                            <span class="increase"></span>
+                        </div>
+                    </div>
+                </div>
+                <a class="au-btn add-to-cart btn-block m-b-30" href="#">Add to cart</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

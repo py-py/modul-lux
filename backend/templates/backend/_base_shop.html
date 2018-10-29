@@ -1,5 +1,5 @@
 {% extends 'backend/_base_other.html' %}
-{% load static values_tags %}
+{% load static backend_tags %}
 
 {% block head_title %}
     Shop - Modul-Lux Site
@@ -23,7 +23,7 @@
                         <ul class="vertical-list">
                             {% for category in categories %}
                             <li>
-                                <a href="#">{{ category.name }}</a>
+                                <a href="{% url 'backend:shop-products' category.id %}">{{ category.name }}</a>
                             </li>
                             {% endfor %}
                         </ul>

@@ -1,1 +1,31 @@
 {% load static %}
+
+<ul class="products row">
+    {% for category in categories %}
+        <li class="product col-md-4 col-sm-6 matchHeigh" style="height: 529.75px;">
+            <div class="image-box image-box-5">
+                <div class="image">
+                    <a class="bg-overlay" href="{% url 'backend:shop-products' category.id %}"></a>
+                    <img src="{{ category.default_image.image.url }}" alt="{{ category.name }}">
+                </div>
+                <div class="content">
+                    <div class="title-bar">
+                        <h3 class="title">
+                            <a href="{% url 'backend:shop-products' category.id %}">{{ category.name }}</a>
+                        </h3>
+                        {% if options.category.rating %}
+                            <ul class="star-rating">
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star"></li>
+                                <li class="fa fa-star-o"></li>
+                                <li class="fa fa-star-o"></li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                    <p class="textbox">{{ category.description }}</p>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
