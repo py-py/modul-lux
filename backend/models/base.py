@@ -20,7 +20,13 @@ class BaseItemModel(models.Model):
 
     @property
     def default_image(self):
-        return self.images.get(is_default=True)
+        path = '#'
+        try:
+            image = self.images.get(is_default=True)
+            path = image.image.url
+        except Exception:
+            pass
+        return path
 
     class Meta:
         abstract = True

@@ -6,8 +6,8 @@
             <div class="image-box image-box-5">
                 <div class="image">
                     <a class="bg-overlay" href="{% url 'backend:product-details' product.id %}"></a>
-                    <img src="{{ product.default_image.image.url }}" alt="{{ product.name }}">
-                    <a class="btn-quickview" data-id={{ product.id }} data-url={% url 'backend:ajax-product-details' %} href="#quickviewModal">
+                    <img src="{{ product.default_image }}" alt="{{ product.name }}">
+                    <a class="btn-quickview" data-url={% url 'rest:product-detail' product.id %} href="#quickviewModal">
                         <i class="fa fa-search-plus"></i>
                         <span>Quick view</span>
                     </a>

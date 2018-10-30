@@ -6,12 +6,9 @@
 
     var instRemodal = $('[data-remodal-id=modal]').remodal();
 
-    var getProductInfo = function (idProduct, urlProduct) {
+    var getProductInfo = function (urlProduct) {
         $.get({
             url: urlProduct,
-            data: {
-                'id_product': idProduct
-            },
             success: function (data) {
                 console.log(data);
             }
@@ -21,7 +18,7 @@
 
     $('.btn-quickview').click(function () {
         var data = $(this).data();
-        getProductInfo(data.id, data.url);
+        getProductInfo(data.url);
     });
 })
 (jQuery);

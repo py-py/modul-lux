@@ -7,6 +7,8 @@ from django.urls import path, include
 urlpatterns = [
     path('',            include(('backend.urls', 'backend'),    namespace='backend')),
     path('client/',     include(('client.urls', 'client'),      namespace='client')),
+
+    path('api/',        include(('rest.urls', 'rest'),          namespace='rest')),
     path('admin/',      admin_modullux.urls),
 ]
 

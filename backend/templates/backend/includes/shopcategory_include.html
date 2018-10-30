@@ -6,7 +6,7 @@
             <div class="image-box image-box-5">
                 <div class="image">
                     <a class="bg-overlay" href="{% url 'backend:shop-products' category.id %}"></a>
-                    <img src="{{ category.default_image.image.url }}" alt="{{ category.name }}">
+                    <img src="{{ category.default_image }}" alt="{{ category.name }}">
                 </div>
                 <div class="content">
                     <div class="title-bar">
