@@ -136,8 +136,8 @@ SITE_OPTIONS = {
 
     # product
     'product': {
-        'price': False,
-        'rating': False,
+        'price': True,
+        'rating': True,
         'related': True,
     },
 

@@ -160,206 +160,30 @@
                     <h3>Featured products</h3>
                 </div>
                 <div class="row">
+                    {% for product in featured_products %}
                     <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
                         <div class="image-box image-box-3">
                             <div class="image">
                                 <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-07.jpg' %}" alt="Creative black chair"/>
-                                <a class="btn-quickview" href="#quickviewModal">
+                                <img src="{{ product.default_image }}" alt="Creative black chair"/>
+                                <a class="btn-quickview" data-url={% url 'rest:product-detail' product.id %} href="#quickviewModal">
                                     <i class="fa fa-search-plus"></i>
                                     <span>Quick view</span>
                                 </a>
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="product-details.html">Creative black chair</a>
+                                    <a href="product-details.html">{{ product.name }}</a>
                                 </h3>
+                                {% if options.product.price %}
                                 <div class="info">
                                     <span class="price">$50.00</span>
                                 </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-08.jpg' %}" alt="Pendant lamp"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Pendant lamp</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-09.jpg' %}" alt="Orange wooden chair"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Orange wooden chair</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-10.jpg' %}" alt="Combo book shelf"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Combo book shelf</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-11.jpg' %}" alt="Yellow wooden sponge table"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Yellow wooden sponge table</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-12.jpg' %}" alt="Blue modern Chair"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Blue modern Chair</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-13.jpg' %}" alt="Lighthouse lantern"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Lighthouse lantern</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-14.jpg' %}" alt="Timmy Sessel - Braun"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Timmy Sessel - Braun</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-15.jpg' %}" alt="Black &amp; white table"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Black &amp; white table</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-cs-2 col-md-3 col-sm-4 col-xs-12 matchHeigh">
-                        <div class="image-box image-box-3">
-                            <div class="image">
-                                <a class="bg-overlay" href="product-details.html"></a>
-                                <img src="{% static 'backend/images/product-16.jpg' %}" alt="Handmade bag"/>
-                                <a class="btn-quickview" href="#quickviewModal">
-                                    <i class="fa fa-search-plus"></i>
-                                    <span>Quick view</span>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <h3 class="title">
-                                    <a href="product-details.html">Handmade bag</a>
-                                </h3>
-                                <div class="info">
-                                    <span class="price">$50.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
