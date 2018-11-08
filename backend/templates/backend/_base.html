@@ -26,7 +26,8 @@
             <!--CSS-->
             <!-- all fonts for the theme-->
             <link href="{% static 'backend/css/theme-fonts.css' %}" rel="stylesheet" media="all">
-            <link href="{% static 'backend/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+            <link href="{% static 'backend/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"
+                  media="all">
 
             <!-- plugin style for the page-->
             <link href="{% static 'backend/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="all">
@@ -60,135 +61,144 @@
 
 <body>
     <div class="animsition">
-    {% block body %}
-        {% block header %}
-        {% endblock %}
+        <div id="app">
+            {% block body %}
+                {% block header %}
+                {% endblock %}
 
-        {% block heading_page %}
-        {% endblock %}
+                {% block heading_page %}
+                {% endblock %}
 
-        {% block slide %}
-        {% endblock %}
+                {% block slide %}
+                {% endblock %}
 
-        {% block main %}
-        {% endblock %}
+                {% block main %}
+                {% endblock %}
 
-        {% block footer %}
-        {% endblock %}
+                {% block footer %}
+                {% endblock %}
 
-        <!--Modal Window-->
-        {% block modal %}
-            {% include 'backend/includes/modal_quickview_include.html' %}
-        {% endblock %}
+                <!--Modal Window-->
+                {% block modal %}
+                    {% include 'backend/includes/modal_quickview_include.html' %}
+                {% endblock %}
 
-        <!--Login Window-->
-        {% block login %}
-            {% if options.login %}
-                <div class="remodal" data-remodal-id="loginModal">
-                    <div class="login-modal">
-                        <button class="remodal-close" data-remodal-action="close" aria-label="Close"></button>
-                        <div class="modal-tabs">
-                            <ul class="tabs">
-                                <li class="active">
-                                    <a href="#create" data-toggle="tab">Create account</a>
-                                </li>
-                                <li>
-                                    <a href="#sign" data-toggle="tab">Sign in</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane in active" id="create">
-                                    <p class="text-block text-black m-b-5">You are using our secure server</p>
-                                    <div class="icon-cert m-b-25">
-                                        <img src="{% static 'backend/images/icons/ic-norton.png' %}" alt="notron"/>
-                                    </div>
-                                    <div class="row-cs">
-                                        <div class="col-cs-6 form-group p-r-5">
-                                            <input class="au-input-1" type="text" placeholder="First name"/>
+                <!--Login Window-->
+                {% block login %}
+                    {% if options.login %}
+                        <div class="remodal" data-remodal-id="loginModal">
+                            <div class="login-modal">
+                                <button class="remodal-close" data-remodal-action="close" aria-label="Close"></button>
+                                <div class="modal-tabs">
+                                    <ul class="tabs">
+                                        <li class="active">
+                                            <a href="#create" data-toggle="tab">Create account</a>
+                                        </li>
+                                        <li>
+                                            <a href="#sign" data-toggle="tab">Sign in</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane in active" id="create">
+                                            <p class="text-block text-black m-b-5">You are using our secure server</p>
+                                            <div class="icon-cert m-b-25">
+                                                <img src="{% static 'backend/images/icons/ic-norton.png' %}" alt="notron"/>
+                                            </div>
+                                            <div class="row-cs">
+                                                <div class="col-cs-6 form-group p-r-5">
+                                                    <input class="au-input-1" type="text" placeholder="First name"/>
+                                                </div>
+                                                <div class="col-cs-6 form-group p-l-5">
+                                                    <input class="au-input-1" type="text" placeholder="Last name"/>
+                                                </div>
+                                            </div>
+                                            <div class="row-cs">
+                                                <div class="col-cs-12 form-group">
+                                                    <input class="au-input-1" type="text" placeholder="Your Email"/>
+                                                </div>
+                                                <div class="col-cs-12 form-group">
+                                                    <input class="au-input-1" type="password" placeholder="Password"/>
+                                                </div>
+                                                <div class="col-cs-12 form-group input-checkbox m-b-25">
+                                                    <input type="checkbox" id="ckcShip"/>
+                                                    <label for="ckcShip">Sign up to get our exclusive offers</label>
+                                                </div>
+                                                <div class="col-cs-12 form-group">
+                                                    <input class="au-btn btn-block" type="submit" value="Create account"/>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-cs-6 form-group p-l-5">
-                                            <input class="au-input-1" type="text" placeholder="Last name"/>
-                                        </div>
-                                    </div>
-                                    <div class="row-cs">
-                                        <div class="col-cs-12 form-group">
-                                            <input class="au-input-1" type="text" placeholder="Your Email"/>
-                                        </div>
-                                        <div class="col-cs-12 form-group">
-                                            <input class="au-input-1" type="password" placeholder="Password"/>
-                                        </div>
-                                        <div class="col-cs-12 form-group input-checkbox m-b-25">
-                                            <input type="checkbox" id="ckcShip"/>
-                                            <label for="ckcShip">Sign up to get our exclusive offers</label>
-                                        </div>
-                                        <div class="col-cs-12 form-group">
-                                            <input class="au-btn btn-block" type="submit" value="Create account"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="sign">
-                                    <p class="text-block text-black m-b-5">You are using our secure server</p>
-                                    <div class="icon-cert m-b-25">
-                                        <img src="{% static 'backend/images/icons/ic-norton.png' %}" alt="notron"/>
-                                    </div>
-                                    <div class="row-cs">
-                                        <div class="col-cs-12 form-group">
-                                            <input class="au-input-1" type="text" placeholder="Your Email"/>
-                                        </div>
-                                        <div class="col-cs-12 form-group">
-                                            <input class="au-input-1" type="password" placeholder="Password"/>
-                                        </div>
-                                        <div class="col-cs-12 form-group">
-                                            <input class="au-btn btn-block" type="submit" value="Sign in"/>
+                                        <div class="tab-pane fade" id="sign">
+                                            <p class="text-block text-black m-b-5">You are using our secure server</p>
+                                            <div class="icon-cert m-b-25">
+                                                <img src="{% static 'backend/images/icons/ic-norton.png' %}" alt="notron"/>
+                                            </div>
+                                            <div class="row-cs">
+                                                <div class="col-cs-12 form-group">
+                                                    <input class="au-input-1" type="text" placeholder="Your Email"/>
+                                                </div>
+                                                <div class="col-cs-12 form-group">
+                                                    <input class="au-input-1" type="password" placeholder="Password"/>
+                                                </div>
+                                                <div class="col-cs-12 form-group">
+                                                    <input class="au-btn btn-block" type="submit" value="Sign in"/>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endblock %}
+                    {% endif %}
+                {% endblock %}
 
-        <!--Javascripts-->
-        {% block body_scripts_main %}
-            <!-- plugin javascripts for the page-->
-            <script src="{% static 'backend/vendor/jquery/jquery.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/jquery.nicescroll/jquery.nicescroll.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/jquery.easeScroll/jquery.easeScroll.js' %}"></script>
-            <script src="{% static 'backend/vendor/isotope/imagesloaded.pkgd.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/isotope/isotope.pkgd.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/matchHeight/jquery.matchHeight.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/noUiSlider/nouislider.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/chosen/chosen.jquery.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/jquery-accordion/jquery.accordion.js' %}"></script>
-            <script src="{% static 'backend/vendor/remodal/remodal.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/animsition/animsition.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
-            <script src="{% static 'backend/vendor/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
-        {% endblock %}
+                <!--Javascripts-->
+                {% block body_scripts_main %}
+                    <!-- plugin javascripts for the page-->
+                    <script src="{% static 'backend/vendor/jquery/jquery.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/jquery.nicescroll/jquery.nicescroll.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/jquery.easeScroll/jquery.easeScroll.js' %}"></script>
+                    <script src="{% static 'backend/vendor/isotope/imagesloaded.pkgd.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/isotope/isotope.pkgd.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/matchHeight/jquery.matchHeight.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/noUiSlider/nouislider.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/chosen/chosen.jquery.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/jquery-accordion/jquery.accordion.js' %}"></script>
+                    <script src="{% static 'backend/vendor/remodal/remodal.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/animsition/animsition.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+                    <script src="{% static 'backend/vendor/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
 
-        {% block body_scripts_extension %}
-            <!--Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading)-->
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
-            <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
-            <script src="{% static 'backend/js/slide-custom.js' %}"></script>
-        {% endblock %}
+                    {# TODO #}
+                    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-        {% block body_scripts_custom %}
-            <!-- javascripts for the theme-->
-            <script src="{% static 'backend/js/main.js' %}"></script>
-            <script src="{% static 'backend/js/quick-view.js' %}"></script>
-        {% endblock %}
-    {% endblock %}
+                {% endblock %}
+
+                {% block body_scripts_extension %}
+                    <!--Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading)-->
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+                    <script type="text/javascript" src="{% static 'backend/vendor/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+                    <script src="{% static 'backend/js/slide-custom.js' %}"></script>
+                {% endblock %}
+
+                {% block body_scripts_custom %}
+                    <!-- javascripts for the theme-->
+                    <script src="{% static 'backend/js/main.js' %}"></script>
+{#                    <script src="{% static 'backend/js/project-view.js' %}"></script>#}
+
+                    {# TODO #}
+                    <script src="{% static 'backend/js/project-vue.js' %}"></script>
+                {% endblock %}
+            {% endblock %}
+        </div>
     </div>
 </body>
 </html>

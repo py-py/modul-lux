@@ -12,9 +12,9 @@
          for (let image of data.images) {
              $('<div class="image-box"><img src="' + image.url + '"></div>').prependTo($('#idProductImages'));
          }
+         $('.owl-carousel').owlCarousel('destroy');
          $('.owl-carousel').owlCarousel();
     };
-
 
     let instRemodal = $('[data-remodal-id="quickview"]').remodal();
 
