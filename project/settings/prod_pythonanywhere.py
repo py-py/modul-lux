@@ -1,5 +1,7 @@
 from .prod import *
 
+ALLOWED_HOSTS += ['valeev0506624980.pythonanywhere.com']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
