@@ -80,7 +80,7 @@
 
                 <!--Modal Window-->
                 {% block modal %}
-                    {% include 'backend/includes/modal_quickview_include.html' %}
+                    {% include 'backend/includes/modal_include.html' %}
                 {% endblock %}
 
                 <!--Login Window-->
@@ -192,9 +192,9 @@
                 {% block body_scripts_custom %}
                     <!-- javascripts for the theme-->
                     <script src="{% static 'backend/js/main.js' %}"></script>
-{#                    <script src="{% static 'backend/js/project-view.js' %}"></script>#}
 
-                    {# TODO #}
+{#                     TODO #}
+{#                    <script src="{% static 'backend/js/project-view.js' %}"></script>#}
                     <script src="{% static 'backend/js/project-vue.js' %}"></script>
                 {% endblock %}
             {% endblock %}

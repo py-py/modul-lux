@@ -2,7 +2,6 @@ let app = new Vue({
     el: '#app',
     delimiters: ['<%', '%>'],
     data: {
-        message: 'Hello Vue!',
         modal: {
             name: null,
             pictures: [],
@@ -10,15 +9,11 @@ let app = new Vue({
         }
     },
     methods: {
-        openModalView: function (event) {
+        openModalWindow: function (event) {
             console.log(this);
             console.log(event);
         },
 
     },
 
-});
-
-$(document).on('opening', '.remodal', function () {
-  console.log('Modal is opening');
 });
