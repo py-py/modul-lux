@@ -136,9 +136,9 @@ SITE_OPTIONS = {
 
     # product
     'product': {
-        'price': True,
-        'rating': True,
-        'related': True,
+        'price': False,
+        'rating': False,
+        'related': False,
     },
 
     # shop page
@@ -193,7 +193,6 @@ SITE_SETTINGS = {
         'email': 'service_support@gmail.com',
         'address': 'г.Днепр, ул.Осенняя, 1',
         'work_hours': 'Понедельник-Суббота 11:00–17:00',
-
     },
 
     'online': {

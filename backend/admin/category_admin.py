@@ -9,16 +9,15 @@ class CategoryImageAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'image', 'is_default', )
 
 
-class CategoryImageTabularInLine(admin.TabularInline):
+class CategoryImageInlineAdmin(admin.TabularInline):
     model = CategoryImage
+    extra = 1
 
 
-class ProductInline(admin.TabularInline):
+class ProductInlineAdmin(admin.TabularInline):
     model = Product
-    max_num = 1
+    extra = 1
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    # inlines = (FurnitureInline, CategoryImageTabularInLine, )
-    # inlines = (FurnitureInline, )
-    pass
+    inlines = (CategoryImageInlineAdmin, ProductInlineAdmin, )
