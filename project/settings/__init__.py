@@ -13,4 +13,4 @@ if environment == 'prod':
 if environment == 'pythonanywhere':
     from .prod_pythonanywhere import *
 if not environment:
-    raise Exception('Does not provide a setting file.')
+    raise Exception('Does not provide a setting file. ENV_VARIABLE: {}'.format(environment))
