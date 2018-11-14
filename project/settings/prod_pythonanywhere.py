@@ -1,6 +1,8 @@
 from .prod import *
 
+SECRET_KEY = 'p)d1@8z3ynm7duiu_@nc$j+!x*o(naye8e35g%^xlg-@yha_%%'
 ALLOWED_HOSTS += ['valeev0506624980.pythonanywhere.com']
+DEBUG = False
 
 DATABASES = {
     'default': {
@@ -11,13 +13,4 @@ DATABASES = {
         'HOST': 'valeev0506624980.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
-}
-
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    ),
-    'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
-    )
 }
