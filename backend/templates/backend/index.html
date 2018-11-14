@@ -101,7 +101,11 @@
                          data-responsive="off" data-x="['center']" data-hoffset="['0', '0', '0', '0']"
                          data-y="['middle']"
                          data-voffset="['60', '80', '80', '120']" data-width="['1100', '700', '700', '480']">
-                        <a class="au-btn" href="blog-details-with-sidebar.html">Read more</a>
+                        {% if options.blog %}
+                            <a class="au-btn" href="blog-details-with-sidebar.html">
+                                Read more
+                            </a>
+                        {% endif %}
                     </div>
                 </li>
                 <!-- LAYER No.2-->
@@ -119,8 +123,9 @@
                          data-y="['middle']"
                          data-voffset="['60', '60', '60', '100']" data-width="['1100', '700', '700', '480']">
                         <div class="textbox text-center m-b-0">
-                            <a class="text-inline text-white text-bold text-hover-animate" href="product-details.html">Read
-                                more</a>
+                            <a class="text-inline text-white text-bold text-hover-animate" href="{% url 'backend:product-details' 1 %}">
+                                Read more
+                            </a>
                         </div>
                     </div>
                 </li>
@@ -139,8 +144,9 @@
                          data-y="['middle']"
                          data-voffset="['60', '60', '60', '100']" data-width="['1100', '700', '700', '480']">
                         <div class="textbox text-center m-b-0">
-                            <a class="text-inline text-white text-bold text-hover-animate" href="product-details.html">Read
-                                more</a>
+                            <a class="text-inline text-white text-bold text-hover-animate" href="{% url 'backend:product-details' 2 %}">
+                                Read more
+                            </a>
                         </div>
                     </div>
                 </li>
@@ -173,7 +179,7 @@
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="product-details.html">{{ product.name }}</a>
+                                    <a href="{% url 'backend:product-details' product.id %}">{{ product.name }}</a>
                                 </h3>
                                 {% if options.product.price %}
                                 <div class="info">

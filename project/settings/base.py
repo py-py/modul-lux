@@ -126,6 +126,7 @@ SITE_OPTIONS = {
     },
 
     # common
+    'blog': False,
     'search': True,
     'sales': True,
 
