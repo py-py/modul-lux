@@ -1,10 +1,10 @@
 from .base import *
 
-from os import getenv
+import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path='.env.example')
-environment = getenv('ENVIRONMENT')
+load_dotenv()
+environment = os.getenv('ENVIRONMENT')
 
 if environment == 'dev':
     from .local import *
@@ -14,4 +14,3 @@ if environment == 'pythonanywhere':
     from .prod_pythonanywhere import *
 if not environment:
     raise Exception('Does not provide a setting file.')
-
