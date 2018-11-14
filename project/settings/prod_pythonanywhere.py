@@ -7,7 +7,7 @@ DEBUG = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'valeev0506624980$modullux',
+        'NAME': 'valeev0506624980$default',
         'USER': 'valeev0506624980',
         'PASSWORD': 'modulpassword',
         'HOST': 'valeev0506624980.mysql.pythonanywhere-services.com',
